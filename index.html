@@ -66,6 +66,34 @@
     </div>
 
 </div>
+<div class="image-slider">
+	<img src="images/example1.jpg" alt="Example image 1">
+	<img src="images/example2.jpg" alt="Example image 2">
+	<img src="images/example3.jpg" alt="Example image 3">
+	<div>Example text 1</div>
+	<div>Example text 2</div>
+	<div>Example text 3</div>
+</div>
+<script>
+	// 获取图片和文字元素
+	var images = document.querySelectorAll('.image-slider img');
+	var texts = document.querySelectorAll('.image-slider div');
+	// 初始显示第一张图片和对应的文字
+	images[0].style.opacity = 1;
+	texts[0].style.opacity = 1;
+	// 定时切换图片和文字
+	var index = 0;
+	var interval = setInterval(function() {
+		// 隐藏当前图片和文字
+		images[index].style.opacity = 0;
+		texts[index].style.opacity = 0;
+		// 计算下一张图片和文字的索引
+		index = (index + 1) % images.length;
+		// 显示下一张图片和对应的文字
+		images[index].style.opacity = 1;
+		texts[index].style.opacity = 1;
+	}, 3000);
+</script>
 
 <script type="text/javascript">
     $('#code').html(config.lines.map(item => {
