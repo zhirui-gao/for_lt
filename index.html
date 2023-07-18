@@ -6,7 +6,7 @@
 <style>
     #image-container {
       position: relative;
-	  top: 0%;
+      top: 0%;
       left: 25%;
       width: 50%;
       height: 50%;
@@ -33,13 +33,12 @@
     }
 
     button {
-	  position: relative;
-	  bottom: 0;
+      position: relative;
+      bottom: 0;
       left: 25%;
       width: 25%;
       font-size: 24px;
       padding: 0px;
-	  
       margin-top: 0px;
     }
   </style>
@@ -308,7 +307,7 @@
     let caption = document.getElementById("caption");
 
     let count = 0;
-	let count1 = 0; 
+    let count1 = 0; 
 
     setInterval(function() {
 	image.style.opacity = 0;
@@ -317,18 +316,13 @@
     caption.innerText = images[count].caption;
     image.style.opacity = 1;
 	}, 500);
-
-	count = (count + 1);
-	count1 = count1 + 1;
-	}, 4000);
-
-		
-	setTimeout(function(){
+    count = (count + 1);
+    count1 = count1 + 1;
+     }, 4000);
+     setTimeout(function(){
 	runAsync().start();
-	},45000);
+      },45000);
 		
-		
-        
     })();
 </script>
 
