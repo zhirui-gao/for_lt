@@ -316,7 +316,7 @@
     caption.innerText = images[count].caption;
     image.style.opacity = 1;
 	}, 500);
-    count = (count + 1);
+    count = (count + 1) %images.length;
     count1 = count1 + 1;
      }, 4000);
      setTimeout(function(){
